@@ -48,6 +48,17 @@ colnames(combined) <- features[, 2]
 # Subset the date to only columns containing the strings "mean" and "std"
 tidy_set <- combined[, features[grep('.*mean.*|.*std.*', features$V2), 2]]
 
-# Add in the Test flag and and Activity label
+# Add in the Test flag and Activity label
 tidy_set$Test <- combined[, "Test"]
 tidy_set$Activity <- combined[, "Activity"]
+
+# Get the mean of each column as grouped by Test and Activity
+  # Subset out the numeric data
+data <- subset(tidy_set, select = (1:79))
+  # Subset out the factors
+factors <- subset(tidy_set, select = (80:81))
+  # Use the aggregate function to get the mean for each
+agg <- aggregate(data, factors, mean)
+
+# Finally, write out the aggregated data set
+write.table(agg, row.name=FALSE, file='aggregated_data.txt')
