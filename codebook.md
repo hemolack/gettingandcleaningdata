@@ -2,8 +2,8 @@
 
 **Variables**
 
-1. Test -- A boolean value indicating whether the observation came from the Test or Training data set -- Mean of the Test -- A boolean value indicating whether the observation came from the Test or Training data set variable as described below over all observations grouped by activity and data set
-2. Activity -- A factor that provides a friendly name for the observed activity -- Mean of the Activity -- A factor that provides a friendly name for the observed activity variable as described below over all observations grouped by activity and data set
+1. Test -- A boolean value indicating whether the observation came from the Test or Training data set 
+2. Activity -- A factor that provides a friendly name for the observed activity 
 3. tBodyGyroMag-max() -- Mean of the tBodyGyroMag-max() variable as described below over all observations grouped by activity and data set
 4. tBodyGyroMag-min() -- Mean of the tBodyGyroMag-min() variable as described below over all observations grouped by activity and data set
 5. tBodyGyroMag-sma() -- Mean of the tBodyGyroMag-sma() variable as described below over all observations grouped by activity and data set
